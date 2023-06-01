@@ -7,7 +7,7 @@ definir profundidade(no):
     se no == vazio:
         retorne 0
     # percorre as sub-árvores da esquerda e da direita
-    retorne 1 + maximo(profundidade(no_direito), profundidade(no_esquerdo))
+    senao retorne 1 + maximo(profundidade(no_direito), profundidade(no_esquerdo))
  
 
 ## supondo receber o nó raiz da árvore binária

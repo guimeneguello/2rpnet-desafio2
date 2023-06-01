@@ -1,0 +1,36 @@
+# função que alimenta a lista
+
+definir alimentadora(lista_compartilhada, numero_linhas):
+    adquirirSemaforo()
+    para linhas em range(numero_linhas)
+        linhas.escrever('random()\n' )
+        ## supondo que exista uma função
+        ## random que gere um número aleatório
+    liberarSemaforo()
+
+
+#função que consome a lista
+
+definir remocao(lista_compartilhada):
+    adquirirSemaforo()
+    enquanto tamanho(lista_compartilhada)>0
+        lista_compartilhada.pop()
+        ## uma função pop remove o último
+        ## elemento de uma lista
+    liberarSemaforo()
+
+
+## um semaforo do tipo mutex poderia ser utilizado
+## e cada função executada em threads separadas
+## lista_compartilhada é uma lista inicialmente
+## vazia. numero_linhas são quantas linhas
+## quer que escreva na função
+
+semaforo.iniciar()
+lista_compartilhada = []
+numero_linhas = 5 ## exemplo
+## poderia haver uma verificação que checa
+## se numero_linhas é do tipo inteiro
+
+alimentadora(lista_compartilhada, numero_linhas)
+remocao(lista_compartilhada)
