@@ -1,0 +1,14 @@
+## a função abaixo recursivamente percorre uma árvore binária
+## e calcula sua altura utilizando seus nós como
+## argumentos da função
+
+definir profundidade(no):
+    # se uma árvore está vazia, sua profundidade é 0
+    se no == vazio:
+        retorne 0
+    # percorre as sub-árvores da esquerda e da direita
+    retorne 1 + maximo(profundidade(no_direito), profundidade(no_esquerdo))
+ 
+
+## supondo receber o nó raiz da árvore binária
+imprima('A profundidade da árvore binária é ', profundidade(no_raiz))
